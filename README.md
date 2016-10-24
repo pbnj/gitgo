@@ -1,7 +1,7 @@
 # GitGo
 A minimal CLI app to query GitHub users.
 
-This project was conceived to introduce GO to beginners.
+This project was conceived to introduce GO to beginners: http://bit.ly/2eIFoIs
 
 ## Installation
 - `go get github.com/pmbenjamin/gitgo`
