@@ -7,15 +7,18 @@ This project was conceived to introduce GO to beginners.
 - `go get github.com/pmbenjamin/gitgo`
 
 ## Usage
-- Help: 
+- Help:
+
     ```
     $ gitgo
     Usage: gitgo [options]
     Options:
         -u, --user string
             Search Users
-    ```
+    ```  
+
 - Single User Query:
+
     ```
     $ gitgo -u pmbenjamin
     Searching user(s): [pmbenjamin]
@@ -24,7 +27,9 @@ This project was conceived to introduce GO to beginners.
     Email:           petermbenjamin@gmail.com
     Bio:             Software Engineer. Hacker. Passionate about coding, IoT, security, and teaching kids how to code.
     ```
+
 - Multi-User Query:
+
     ```
     $ gitgo -u pmbenjamin,defunkt                                                                                                                                    
     Searching user(s): [pmbenjamin defunkt]
