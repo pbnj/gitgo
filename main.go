@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	colour "github.com/fatih/color"
 	flag "github.com/ogier/pflag"
 )
 
@@ -24,12 +25,13 @@ func main() {
 
 	users := strings.Split(user, ",")
 	fmt.Printf("Searching user(s): %s\n", users)
+	fmt.Println("")
 	for _, u := range users {
 		result := getUsers(u)
-		fmt.Println(`Username:	`, result.Login)
-		fmt.Println(`Name:		`, result.Name)
-		fmt.Println(`Email:		`, result.Email)
-		fmt.Println(`Bio:		`, result.Bio)
+		colour.Cyan(`Username:	%s`, result.Login)
+		colour.Blue(`Name:		%s`, result.Name)
+		colour.Green(`Email:		%s`, result.Email)
+		colour.HiMagenta(`Bio:		%s`, result.Bio)
 		fmt.Println("")
 	}
 
