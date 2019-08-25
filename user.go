@@ -2,11 +2,14 @@ package main
 
 import (
 	"encoding/json"
+	"os"
 	"time"
 	// "fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	colour "github.com/fatih/color"
 )
 
 const (
@@ -59,8 +62,15 @@ func getUsers(name string) User {
 	if err != nil {
 		log.Fatalf("Error reading data: %s\n", err)
 	}
-	
+
 	var user User
 	json.Unmarshal(body, &user)
+
+	if (User{}) == user {
+
+		colour.Red("Sorry the GitHub user doesn't exist")
+		os.Exit(1)
+		return user
+	}
 	return user
 }
